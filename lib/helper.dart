@@ -11,7 +11,6 @@ class CreateBoxes extends StatelessWidget {
       width: 120,
       height: 120,
       child: Card(
-        
         color: Colors.purple,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +28,6 @@ class CreateBoxes extends StatelessWidget {
 }
 
 class CreateRow extends StatelessWidget {
-  
   List<TextEditingController> controls;
 
   CreateRow(this.controls);
