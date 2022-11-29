@@ -28,7 +28,7 @@ class TicTacToe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // addControls();
+    addControls();
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.purple),
       home: Scaffold(
