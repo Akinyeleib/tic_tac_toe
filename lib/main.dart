@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'helper.dart';
 
@@ -33,7 +32,7 @@ class TicTacToe extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.purple),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('TicTacToe'),
+          title: const Text('TicTacToe'),
           centerTitle: true,
         ),
         body: Column(
