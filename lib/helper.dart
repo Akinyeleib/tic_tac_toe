@@ -9,7 +9,10 @@ class CreateBoxes extends StatefulWidget {
 }
 
 class CreateBoxesState extends State {
+  
   CreateBoxesState(this.control);
+
+  static late List<TextEditingController> controls;
 
   var control = TextEditingController();
   String text = '';

@@ -16,15 +16,6 @@ class TicTacToe extends StatelessWidget {
   var control8 = TextEditingController();
   var control9 = TextEditingController();
 
-  // late List<TextEditingController> controls;
-
-  // void addControls() {
-  //   controls.clear();
-  //   controls.add(control1);
-  //   controls.add(control2);
-  //   controls.add(control3);
-  // }
-
   @override
   Widget build(BuildContext context) {
     // addControls();
