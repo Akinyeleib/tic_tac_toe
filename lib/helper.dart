@@ -1,9 +1,26 @@
 import 'package:flutter/material.dart';
 
-class CreateBoxes extends StatelessWidget {
+class CreateBoxes extends StatefulWidget {
   var control = TextEditingController();
-
   CreateBoxes(this.control);
+
+  @override
+  CreateBoxesState createState() => CreateBoxesState(control);
+}
+
+class CreateBoxesState extends State {
+  CreateBoxesState(this.control);
+
+  var control = TextEditingController();
+  String text = '';
+
+  // bool isPlayerOneTurn =
+
+  void clicked() {
+    setState(() {
+      text = 'X';
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +29,18 @@ class CreateBoxes extends StatelessWidget {
       height: 120,
       child: Card(
         color: Colors.purple,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'X',
-              style: TextStyle(fontSize: 40),
-              textAlign: TextAlign.center,
-            ),
-          ],
+        child: InkWell(
+          onTap: clicked,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text,
+                style: TextStyle(fontSize: 40),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );
