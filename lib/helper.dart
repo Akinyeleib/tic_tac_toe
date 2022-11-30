@@ -14,11 +14,17 @@ class CreateBoxesState extends State {
   var control = TextEditingController();
   String text = '';
 
-  // bool isPlayerOneTurn =
+  static bool isPlayerOneTurn = true;
 
   void clicked() {
     setState(() {
-      text = 'X';
+      if (isPlayerOneTurn) {
+        text = 'X';
+        isPlayerOneTurn = false;
+      } else {
+        text = 'O';
+        isPlayerOneTurn = true;
+      }
     });
   }
 
