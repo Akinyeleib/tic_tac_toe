@@ -29,26 +29,14 @@ class TicTacToe extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                Expanded(child: CreateBoxes(control1)),
-                Expanded(child: CreateBoxes(control2)),
-                Expanded(child: CreateBoxes(control3)),
-              ],
+            CreateRow(
+              [control1, control2, control3],
             ),
-            Row(
-              children: [
-                Expanded(child: CreateBoxes(control4)),
-                Expanded(child: CreateBoxes(control5)),
-                Expanded(child: CreateBoxes(control6)),
-              ],
+            CreateRow(
+              [control4, control6, control7],
             ),
-            Row(
-              children: [
-                Expanded(child: CreateBoxes(control7)),
-                Expanded(child: CreateBoxes(control8)),
-                Expanded(child: CreateBoxes(control9)),
-              ],
+            CreateRow(
+              [control7, control8, control9],
             ),
           ],
         ),

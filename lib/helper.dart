@@ -124,9 +124,9 @@ class CreateRow extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CreateBoxes(controls[0]),
-        CreateBoxes(controls[1]),
-        CreateBoxes(controls[2]),
+        Expanded(child: CreateBoxes(controls[0])),
+        Expanded(child: CreateBoxes(controls[1])),
+        Expanded(child: CreateBoxes(controls[2])),
       ],
     );
   }
