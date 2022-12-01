@@ -31,23 +31,23 @@ class TicTacToe extends StatelessWidget {
           children: [
             Row(
               children: [
-                CreateBoxes(control1),
-                CreateBoxes(control2),
-                CreateBoxes(control3),
+                Expanded(child: CreateBoxes(control1)),
+                Expanded(child: CreateBoxes(control2)),
+                Expanded(child: CreateBoxes(control3)),
               ],
             ),
             Row(
               children: [
-                CreateBoxes(control4),
-                CreateBoxes(control5),
-                CreateBoxes(control6),
+                Expanded(child: CreateBoxes(control4)),
+                Expanded(child: CreateBoxes(control5)),
+                Expanded(child: CreateBoxes(control6)),
               ],
             ),
             Row(
               children: [
-                CreateBoxes(control7),
-                CreateBoxes(control8),
-                CreateBoxes(control9),
+                Expanded(child: CreateBoxes(control7)),
+                Expanded(child: CreateBoxes(control8)),
+                Expanded(child: CreateBoxes(control9)),
               ],
             ),
           ],
