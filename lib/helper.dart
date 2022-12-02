@@ -19,6 +19,7 @@ class CreateBtnState extends State {
   static bool isPlayerOneTurn = true;
 
   void clicked() {
+    // print('control.text: ${control.text}');
     setState(() {
       if (control.text == '') {
         if (isPlayerOneTurn) {
@@ -59,25 +60,23 @@ class CreateBtnState extends State {
 
 class CreateBoxes extends StatefulWidget {
   var control = TextEditingController();
-  CreateBoxes(this.control);
+  CreateBoxes(this.control, {super.key});
 
   @override
-  CreateBoxesState createState() => CreateBoxesState(control);
+  State<CreateBoxes> createState() => CreateBoxesState();
 }
 
-class CreateBoxesState extends State {
-  CreateBoxesState(this.control);
-
+class CreateBoxesState extends State<CreateBoxes> {
   static late List<TextEditingController> controls;
 
-  var control = TextEditingController();
   String text = '';
 
   static bool isPlayerOneTurn = true;
 
   void clicked() {
     setState(() {
-      if (control.text == '') {
+      print('Text is: ${widget.control.text}');
+      if (widget.control.text == '') {
         if (isPlayerOneTurn) {
           text = 'X';
           isPlayerOneTurn = false;
