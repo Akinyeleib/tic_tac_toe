@@ -17,17 +17,16 @@ class CreateBoxesState extends State<CreateBoxes> {
 
   void clicked() {
     setState(() {
-      print('Text is: ${widget.control.text}');
-      if (widget.control.text == '') {
-        if (isPlayerOneTurn) {
-          text = 'X';
-          isPlayerOneTurn = false;
-        } else {
-          text = 'O';
-          isPlayerOneTurn = true;
-        }
+      print('Text before is: ${text}');
+      if (isPlayerOneTurn) {
+        text = 'X';
+        isPlayerOneTurn = false;
+      } else {
+        text = 'O';
+        isPlayerOneTurn = true;
       }
     });
+    print('Text after is: ${text}');
   }
 
   @override
