@@ -17,6 +17,7 @@ class CreateBoxesState extends State<CreateBoxes> {
 
   void clicked() {
     setState(() {
+      if (text == 'O' || text == 'X') return;
       print('Text before is: ${text}');
       if (isPlayerOneTurn) {
         text = 'X';
