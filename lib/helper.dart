@@ -12,22 +12,26 @@ class CreateBoxesState extends State<CreateBoxes> {
   static late List<TextEditingController> controls;
 
   String text = '';
+  Color color = Colors.green;
+  Color colorX = Colors.yellow, colorO = Colors.blue;
 
   static bool isPlayerOneTurn = true;
 
   void clicked() {
     setState(() {
       if (text == 'O' || text == 'X') return;
-      print('Text before is: ${text}');
+      // print('Text before is: ${text}');
       if (isPlayerOneTurn) {
         text = 'X';
+        color = colorX;
         isPlayerOneTurn = false;
       } else {
         text = 'O';
+        color = colorO;
         isPlayerOneTurn = true;
       }
     });
-    print('Text after is: ${text}');
+    // print('Text after is: ${text}');
   }
 
   @override
@@ -39,15 +43,16 @@ class CreateBoxesState extends State<CreateBoxes> {
         color: Colors.purple,
         child: InkWell(
           onTap: clicked,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                text,
-                style: TextStyle(fontSize: 40),
-                textAlign: TextAlign.center,
+          child: ElevatedButton(
+            onPressed: clicked,
+            child: Text(
+              text,
+              style: TextStyle(
+                fontSize: 40,
+                color: color,
               ),
-            ],
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
       ),
