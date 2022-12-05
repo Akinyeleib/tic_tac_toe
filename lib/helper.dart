@@ -34,7 +34,7 @@ class CreateBoxesState extends State<CreateBoxes> {
       playCount++;
       if (playCount == 9) playCount = 0;
     });
-    // print('Text after is: ${text}');
+    print('Text after is: ${text}');
   }
 
   @override
