@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CreateBoxes extends StatefulWidget {
-  var control = TextEditingController();
-  CreateBoxes(this.control, {super.key});
+  
+  CreateBoxes({super.key});
 
   @override
   State<CreateBoxes> createState() => CreateBoxesState();
@@ -64,9 +64,8 @@ class CreateBoxesState extends State<CreateBoxes> {
 }
 
 class CreateRow extends StatelessWidget {
-  List<TextEditingController> controls;
 
-  CreateRow(this.controls, {super.key});
+  CreateRow({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,13 +73,13 @@ class CreateRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
-          child: CreateBoxes(controls[0]),
+          child: CreateBoxes(),
         ),
         Expanded(
-          child: CreateBoxes(controls[1]),
+          child: CreateBoxes(),
         ),
         Expanded(
-          child: CreateBoxes(controls[2]),
+          child: CreateBoxes(),
         ),
       ],
     );
